@@ -1,16 +1,38 @@
-# React + Vite
+# Restorant Fieri Menu
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An unofficial digital menu for Restorant Fieri, created by patrons who love the restaurant.
 
-Currently, two official plugins are available:
+**This is NOT an official website of the restaurant.** It was made by regular customers as a personal project to have a convenient digital menu available.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Live Site
 
-## React Compiler
+https://fieri-menu.pages.dev
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- Trilingual menu (Albanian, English, Turkish)
+- Real-time search across all menu items
+- Shopping cart functionality
+- Responsive design for mobile and desktop
+- Daily specials section
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+- React 19
+- Vite
+- Cloudflare Pages
+
+## Disclaimer
+
+This menu was created by patrons based on publicly available information. Menu items and prices may not be current. For the most accurate and up-to-date information, please visit the restaurant directly.
+
+## Development
+
+```bash
+npm install
+npm run dev
+```
+
+## License
+
+This project is for personal/educational use only.
