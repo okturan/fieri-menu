@@ -254,6 +254,6 @@ export const dailyMenuItems = {
     { nameSq: "Paidhage vici me pilaf", nameEn: "Veal Ribs w/ Pilaf", nameTr: "Pilavlı Dana Kaburga", searchTags: "paidhage ribs kaburga", price: 650 },
     { nameSq: "Fileto gici me pilaf", nameEn: "Pork Fillet w/ Pilaf", nameTr: "Pilavlı Domuz Fileto", searchTags: "fileto gici pork domuz", price: 550 },
     { nameSq: "Gic furre me pure", nameEn: "Oven Pork w/ Puree", nameTr: "Püreli Fırın Domuz", searchTags: "gic furre pork domuz", price: 550 },
-    { nameSq: "Mëlçi te skuqura", nameEn: "Pan-Fried Liver", nameTr: "Arnavut Ciğeri", searchTags: "melci ciger liver karaciğer arnavut", price: 650 },
+    { nameSq: "Mëlçi te skuqura", nameEn: "Pan-Fried Liver", nameTr: "Ciğer Tava", searchTags: "melci ciger liver karaciğer tava", price: 650 },
   ]
 };
