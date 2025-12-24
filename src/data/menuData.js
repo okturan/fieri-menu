@@ -178,13 +178,18 @@ export const menuSections = {
 export const dailyMenuItems = {
   left: [
     { nameSq: "2 Qofte me salce & patate furre", nameEn: "2 Meatballs w/ Sauce & Potatoes", nameTr: "Soslu Köfte (2 adet) ve Fırın Patates", searchTags: "qofte meatballs kofte", price: 300 },
+    { nameSq: "Thjereza", nameEn: "Lentil Stew", nameTr: "Mercimek Yemeği", searchTags: "thjereza lentil mercimek", price: 200 },
     { nameSq: "Pastico", nameEn: "Pastitsio", nameTr: "Fırın Makarna (Beşamel Soslu)", searchTags: "pastico pastitsio firin makarna", price: 200 },
     { nameSq: "Speca te mbushur", nameEn: "Stuffed Peppers", nameTr: "Biber Dolması", searchTags: "speca peppers dolma", price: 400 },
+    { nameSq: "Tave kosi mish vici", nameEn: "Yogurt Casserole w/ Veal", nameTr: "Dana Etli Yoğurtlu Güveç", searchTags: "tave kosi yogurt veal dana", price: 400 },
     { nameSq: "Tave spinaqi", nameEn: "Spinach Casserole", nameTr: "Ispanak Güveci", searchTags: "tave spinaqi spinach casserole ispanak", price: 350 },
     { nameSq: "Tave me fileto pule", nameEn: "Chicken Fillet Casserole", nameTr: "Tavuk Fileto Güveci", searchTags: "tave pule chicken casserole tavuk", price: 350 },
     { nameSq: "Tarator", nameEn: "Cold Yogurt Soup", nameTr: "Soğuk Yoğurt Çorbası", searchTags: "tarator yogurt soup cacik", price: 100 },
     { nameSq: "Sallate laker", nameEn: "Cabbage Salad", nameTr: "Lahana Salatası", searchTags: "sallate laker cabbage lahana", price: 150 },
+    { nameSq: "Sallate turshi", nameEn: "Pickled Vegetable Salad", nameTr: "Turşu Salatası", searchTags: "sallate turshi pickled tursu", price: 150 },
     { nameSq: "Sallate panxhari", nameEn: "Beetroot Salad", nameTr: "Pancar Salatası", searchTags: "sallate panxhari beetroot pancar", price: 150 },
+    { nameSq: "Mozzarela me domate", nameEn: "Mozzarella w/ Tomato", nameTr: "Domatesli Mozzarella", searchTags: "mozzarela mozzarella domate tomato", price: 350 },
+    { nameSq: "Rukola parmixhan", nameEn: "Arugula Parmesan Salad", nameTr: "Roka Parmesan Salatası", searchTags: "rukola arugula roka parmesan", price: 350 },
     {
       nameSq: "Mish Jani (Pa mish / Me mish)",
       nameEn: "Jahni Stew (Veg / Meat)",
@@ -249,5 +254,6 @@ export const dailyMenuItems = {
     { nameSq: "Paidhage vici me pilaf", nameEn: "Veal Ribs w/ Pilaf", nameTr: "Pilavlı Dana Kaburga", searchTags: "paidhage ribs kaburga", price: 650 },
     { nameSq: "Fileto gici me pilaf", nameEn: "Pork Fillet w/ Pilaf", nameTr: "Pilavlı Domuz Fileto", searchTags: "fileto gici pork domuz", price: 550 },
     { nameSq: "Gic furre me pure", nameEn: "Oven Pork w/ Puree", nameTr: "Püreli Fırın Domuz", searchTags: "gic furre pork domuz", price: 550 },
+    { nameSq: "Ciğer", nameEn: "Liver", nameTr: "Ciğer", searchTags: "ciger liver karaciğer", price: 650 },
   ]
 };
