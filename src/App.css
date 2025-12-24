@@ -450,6 +450,13 @@ h1 {
     color: var(--accent-color);
 }
 
+.daily-note {
+    font-size: 0.85rem;
+    color: #888;
+    font-style: italic;
+    margin-top: 0.25rem;
+}
+
 .note {
     text-align: center;
     font-size: 0.8rem;

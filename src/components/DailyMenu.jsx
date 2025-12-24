@@ -16,6 +16,9 @@ export default function DailyMenu({ searchTerm }) {
           Menu Ditore / Daily Menu / Günlük Menü
         </h2>
         <div className="daily-date">{dateStr}</div>
+        <div className="daily-note">
+          Disponueshmëria ndryshon çdo ditë / Availability varies daily / Her gün değişir
+        </div>
       </div>
 
       <div className="menu-grid">
