@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import { CartContext } from './cart-context';
 
 export function CartProvider({ children }) {
@@ -52,13 +52,13 @@ export function CartProvider({ children }) {
     });
   };
 
-  const toggleModal = () => {
+  const toggleModal = useCallback(() => {
     setIsModalOpen(prev => !prev);
-  };
+  }, []);
 
-  const closeModal = () => {
+  const closeModal = useCallback(() => {
     setIsModalOpen(false);
-  };
+  }, []);
 
   const cartCount = cart.reduce((sum, item) => sum + item.qty, 0);
   const cartTotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);

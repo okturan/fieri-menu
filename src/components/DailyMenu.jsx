@@ -1,7 +1,13 @@
 import MenuItem from './MenuItem';
 import { dailyMenuItems } from '../data/menuData';
+import { matchesSearch } from '../utils/menu-search';
 
 export default function DailyMenu({ searchTerm }) {
+  const visibleLeft = dailyMenuItems.left.filter((item) => matchesSearch(item, searchTerm));
+  const visibleRight = dailyMenuItems.right.filter((item) => matchesSearch(item, searchTerm));
+
+  if (visibleLeft.length + visibleRight.length === 0) return null;
+
   return (
     <div className="daily-menu">
       <div className="daily-header">
@@ -15,13 +21,13 @@ export default function DailyMenu({ searchTerm }) {
 
       <div className="menu-grid">
         <div className="menu-column">
-          {dailyMenuItems.left.map((item, index) => (
-            <MenuItem key={index} item={item} searchTerm={searchTerm} />
+          {visibleLeft.map((item) => (
+            <MenuItem key={`${item.nameSq}-${item.nameEn}`} item={item} searchTerm={searchTerm} />
           ))}
         </div>
         <div className="menu-column">
-          {dailyMenuItems.right.map((item, index) => (
-            <MenuItem key={index} item={item} searchTerm={searchTerm} />
+          {visibleRight.map((item) => (
+            <MenuItem key={`${item.nameSq}-${item.nameEn}`} item={item} searchTerm={searchTerm} />
           ))}
         </div>
       </div>

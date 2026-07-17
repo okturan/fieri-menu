@@ -1,17 +1,10 @@
 import { useState } from 'react';
 import { useCart } from '../context/useCart';
+import { matchesSearch } from '../utils/menu-search';
 
 export default function MenuItem({ item, searchTerm }) {
   const { addToCart } = useCart();
   const [clickedBtn, setClickedBtn] = useState(null);
-
-  const isVisible = () => {
-    if (!searchTerm) return true;
-    const term = searchTerm.toLowerCase();
-    const text = `${item.nameSq} ${item.nameEn} ${item.nameTr}`.toLowerCase();
-    const searchTags = item.searchTags || "";
-    return text.includes(term) || searchTags.includes(term);
-  };
 
   const handleAddClick = (price, variantSq, variantEn, variantTr, btnId) => {
     addToCart(item, price, variantSq, variantEn, variantTr);
@@ -19,7 +12,7 @@ export default function MenuItem({ item, searchTerm }) {
     setTimeout(() => setClickedBtn(null), 1000);
   };
 
-  if (!isVisible()) {
+  if (!matchesSearch(item, searchTerm)) {
     return null;
   }
 
@@ -37,10 +30,12 @@ export default function MenuItem({ item, searchTerm }) {
               <span className="price-label">{variant.label}</span>
               <span className="price-text">{variant.price} L</span>
               <button
+                type="button"
                 className="add-btn add-btn-text"
+                aria-label={`Add ${item.nameEn} ${variant.label} to planning list`}
                 onClick={() => handleAddClick(variant.price, variant.variantSq, variant.variantEn, variant.variantTr, `${item.nameSq}-${idx}`)}
               >
-                {clickedBtn === `${item.nameSq}-${idx}` ? <i className="fas fa-check"></i> : `+${variant.price}`}
+                {clickedBtn === `${item.nameSq}-${idx}` ? 'Added' : `+${variant.price}`}
               </button>
             </div>
           ))
@@ -48,10 +43,12 @@ export default function MenuItem({ item, searchTerm }) {
           <div className="price-row">
             <span className="price-text">{item.price} Lek</span>
             <button
+              type="button"
               className="add-btn"
+              aria-label={`Add ${item.nameEn} to planning list`}
               onClick={() => handleAddClick(item.price, null, null, null, item.nameSq)}
             >
-              {clickedBtn === item.nameSq ? <i className="fas fa-check"></i> : '+'}
+              {clickedBtn === item.nameSq ? '✓' : '+'}
             </button>
           </div>
         )}
