@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useCart } from '../context/CartContext';
+import { useCart } from '../context/useCart';
 
 export default function MenuItem({ item, searchTerm }) {
   const { addToCart } = useCart();
