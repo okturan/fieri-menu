@@ -1,4 +1,4 @@
-import { useCart } from '../context/CartContext';
+import { useCart } from '../context/useCart';
 
 export default function CartModal() {
   const { cart, cartTotal, isModalOpen, toggleModal, closeModal, changeQty } = useCart();
