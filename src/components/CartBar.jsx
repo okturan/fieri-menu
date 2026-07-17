@@ -8,12 +8,17 @@ export default function CartBar() {
   }
 
   return (
-    <div className="cart-bar" onClick={toggleModal}>
+    <button
+      type="button"
+      className="cart-bar"
+      aria-label={`Open planning list: ${cartCount} ${cartCount === 1 ? 'item' : 'items'}, ${cartTotal} Lek`}
+      onClick={toggleModal}
+    >
       <div className="cart-info">
         <div className="cart-count-badge">{cartCount}</div>
         <span>Shporta / Cart / Sepet</span>
       </div>
       <div>{cartTotal} Lek</div>
-    </div>
+    </button>
   );
 }

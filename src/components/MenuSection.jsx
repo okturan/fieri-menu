@@ -1,12 +1,17 @@
 import MenuItem from './MenuItem';
+import { matchesSearch } from '../utils/menu-search';
 
 export default function MenuSection({ title, items, searchTerm }) {
+  const visibleItems = items.filter((item) => matchesSearch(item, searchTerm));
+
+  if (visibleItems.length === 0) return null;
+
   return (
-    <div className="menu-section">
-      <div className="section-title">{title}</div>
-      {items.map((item, index) => (
-        <MenuItem key={index} item={item} searchTerm={searchTerm} />
+    <section className="menu-section">
+      <h2 className="section-title">{title}</h2>
+      {visibleItems.map((item) => (
+        <MenuItem key={`${item.nameSq}-${item.nameEn}`} item={item} searchTerm={searchTerm} />
       ))}
-    </div>
+    </section>
   );
 }

@@ -14,7 +14,7 @@ concurrency:
 
 jobs:
   quality:
-    name: Lint and build
+    name: Test, lint, and build
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
@@ -35,6 +35,9 @@ jobs:
 
       - name: Lint source
         run: npm run lint
+
+      - name: Test menu behavior
+        run: npm test
 
       - name: Build production site
         run: npm run build
