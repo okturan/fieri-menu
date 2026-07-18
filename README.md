@@ -43,6 +43,11 @@ npm run lint
 npm run build
 ```
 
-## Reuse status
+## License
 
-This repository does not currently include a standalone license file. Any licensing decision remains with the repository owner.
+Original application source code and documentation in this repository are
+available under the [MIT License](./LICENSE).
+
+Restaurant names and marks, menu item names and descriptions, prices, and
+other restaurant content are excluded from that grant. They remain with their
+respective owners and appear here only as part of this unofficial menu.
